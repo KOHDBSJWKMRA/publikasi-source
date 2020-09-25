@@ -1,0 +1,8 @@
+#X-Frame-Options untuk cara ini tidak diatur di meta melainkan di atus di bagian header bersamaan dengan document ini
+Header set X-Frame-Options DENY
+
+#hanya mengisinkan iframe dari web yang sama
+Header append X-FRAME-OPTIONS "SAMEORIGIN"
+
+#diijinkan di domain tertentu but (not supported by Chrome or Safari)
+Header append X-FRAME-OPTIONS ALLOW-FROM https://facebook.com/
